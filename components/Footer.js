@@ -12,7 +12,7 @@ export default function Footer() {
         >
           Siddharth Borderwala {}
         </a>
-        &ncopy; {new Date().getFullYear()}
+        &copy; {new Date().getFullYear()}
       </p>
     </footer>
   )
