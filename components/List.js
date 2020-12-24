@@ -2,6 +2,13 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Accordian from './Accordian'
 
+/**
+ * A List of Accordian(s) when receives proper data
+ * Renders pulsating skeleton while loading and an
+ * error message on error
+ *
+ * @param {React.HTMLAttributes<HTMLAnchorElement> & {tab: string; filter: string;}} props
+ */
 export default function List({ tab, filter }) {
   const [data, setData] = useState([])
 

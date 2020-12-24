@@ -1,3 +1,6 @@
+/**
+ * Info has the introduction and how-to-use information
+ */
 export default function Info() {
   return (
     <div className="p-4">

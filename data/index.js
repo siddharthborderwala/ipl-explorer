@@ -1,3 +1,7 @@
+/**
+ * Data to serve over the api or the front-end
+ */
+
 export const players = `name,birth_date,batting_hand,bowling_skill,country
 A Ashish Reddy,2-24-1991,Right hand bat,Right arm medium,India
 A Chandila,12-05-1983,Right hand bat,Right arm offbreak,India

@@ -1,5 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+/**
+ * Custom document class for advance usage
+ */
 class MyDocument extends Document {
   render() {
     return (

@@ -1,6 +1,11 @@
 import NavLink from './NavLink'
 import { useEffect, useState } from 'react'
 
+/**
+ * A Nav for navigating through different NavLinks
+ *
+ * @param {React.HTMLAttributes<HTMLAnchorElement> & {activeTab: string; handleFilterSubmit: (inp: string) => void;}} props
+ */
 export default function Nav({ activeTab, handleFilterSubmit }) {
   const [filterValue, setFilterValue] = useState('')
 

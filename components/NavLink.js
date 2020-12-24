@@ -1,3 +1,10 @@
+import React from 'react'
+
+/**
+ * A NavLink for navigating through different tabs
+ *
+ * @param {React.HTMLAttributes<HTMLAnchorElement> & {tabName: string; isActive: boolean;}} props
+ */
 export default function NavLink({ tabName, isActive }) {
   return (
     <a

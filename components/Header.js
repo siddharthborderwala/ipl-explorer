@@ -1,6 +1,9 @@
 import GitHubIcon from '../assets/icons/github.svg'
 import SunIcon from '../assets/icons/sun.svg'
 
+/**
+ * Header of the Site
+ */
 export default function Header() {
   const toggleDarkMode = () => {
     document.querySelector('html').classList.toggle('dark')

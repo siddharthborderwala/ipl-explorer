@@ -1,5 +1,8 @@
 import Head from 'next/head'
 
+/**
+ * A component for putting all the meta and seo related tags
+ */
 export default function Tags() {
   return (
     <Head>

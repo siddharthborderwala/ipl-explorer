@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * ToTopButton observes the scrollTop of document and display a scroll to top button on 1500px
+ */
 export default function ToTopButton() {
   const [toTopVisible, setToTopVisible] = useState(false)
   const scrollListener = (e) => {
-    if (document.documentElement.scrollTop > 1500) {
+    if (document.documentElement.scrollTop > 1500 && !toTopVisible) {
       setToTopVisible(true)
-    } else {
+    } else if (document.documentElement.scrollTop < 1500 && toTopVisible) {
       setToTopVisible(false)
     }
   }

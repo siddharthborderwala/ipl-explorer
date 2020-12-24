@@ -1,5 +1,8 @@
 import HeartIcon from '../assets/icons/heart.svg'
 
+/**
+ * Footer of the Site
+ */
 export default function Footer() {
   return (
     <footer className="bg-white border-t py-8 flex justify-center">

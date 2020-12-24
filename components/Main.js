@@ -3,6 +3,10 @@ import Info from './Info'
 import List from './List'
 import Nav from './Nav'
 
+/**
+ * Main component carries the Nav and the List component
+ * It also holds the states of the tab for nav and filter for list
+ */
 export default function Main() {
   const [tab, setTab] = useState('')
   const [filter, setFilter] = useState('')
