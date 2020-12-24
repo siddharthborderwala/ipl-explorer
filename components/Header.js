@@ -20,6 +20,8 @@ export default function Header() {
       <div className="flex space-x-6">
         <button
           aria-label="toggle dark mode button"
+          disabled
+          title="yet to be implemented"
           onClick={toggleDarkMode}
           className="focus:outline-none focus:ring-1 border-none rounded scale-150 transform"
         >

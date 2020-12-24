@@ -12,8 +12,6 @@ import Accordian from './Accordian'
 export default function List({ tab, filter }) {
   const [data, setData] = useState([])
 
-  const getAccTitle = () => (tab === 'matches' ? 'home' : 'name')
-
   useEffect(() => {
     axios(`/api/data?resource=${tab}&size=0&page=1`)
       .then((res) => setData(res.data.data))
@@ -51,7 +49,7 @@ export default function List({ tab, filter }) {
           return false
         })
         .map((elem, index) => (
-          <Accordian key={index} title={elem[getAccTitle()]} data={elem} />
+          <Accordian key={index} title={elem['name']} data={elem} />
         ))}
     </div>
   )
