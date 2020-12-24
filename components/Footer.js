@@ -8,7 +8,8 @@ export default function Footer() {
         <a
           href="https://codexsid.com"
           target="_blank"
-          className="text-indigo-500 hover:underline"
+          rel="noopener noreferrer"
+          className="text-indigo-600 hover:underline"
         >
           Siddharth Borderwala
         </a>

@@ -35,13 +35,21 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
         onSubmit={handleFormSubmit}
       >
         <input
-          className="border text-indigo-500 placeholder-current rounded p-2 focus:outline-none focus-within:ring-2"
+          className="text-indigo-600 placeholder-current rounded p-2 focus:outline-none focus-within:ring-2"
           type="text"
           placeholder="Filter here"
           onChange={handleInputChange}
           value={filterValue}
+          id="filter-input"
         />
+        <label
+          htmlFor="filter-input"
+          className="w-0 h-0 opacity-0 pointer-events-none"
+        >
+          Filter here
+        </label>
         <button
+          aria-label="apply filter to results button"
           type="submit"
           className="py-1.5 px-6 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
         >

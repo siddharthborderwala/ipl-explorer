@@ -14,7 +14,7 @@ export default function Info() {
           href="https://atlan.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-indigo-500 hover:underline"
+          className="text-indigo-600 hover:underline"
         >
           Atlan
         </a>

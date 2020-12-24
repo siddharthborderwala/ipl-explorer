@@ -16,6 +16,7 @@ export default function Header() {
       </a>
       <div className="flex space-x-6">
         <button
+          aria-label="toggle dark mode button"
           onClick={toggleDarkMode}
           className="focus:outline-none focus:ring-1 border-none rounded scale-150 transform"
         >
@@ -24,6 +25,7 @@ export default function Header() {
         <a
           href="https://github.com/siddharthborderwala/ipl-explorer"
           target="_blank"
+          aria-label="link to github repository"
           rel="noopener noreferrer"
           className="focus:outline-none focus:ring-1 border-none rounded scale-150 transform"
         >
