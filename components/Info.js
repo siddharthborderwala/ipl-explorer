@@ -25,11 +25,17 @@ export default function Info() {
       <br />
       <h2 className="text-2xl font-bold text-gray-800">How to browse ❓</h2>
       <p className="text-lg text-gray-500 mt-3">
-        There are 3 tabs for 3 different types entities, each tab will display a
-        list of the entities of that particular type and you can filter them
-        results based on the attributes the that entity has. To come look back
-        at this information, click on the IPL Explorer text-link in the top left
-        corner.
+        This app has data of IPL 2017 divided into 3 categories -
+        <br />
+        1. Players - list of all the players in IPL 2017
+        <br />
+        2. Teams - list of all teams (and their owners) in IPL 2017
+        <br />
+        3. Venues - list of all venues (and the cities) in IPL 2017
+        <br />
+        Go to any tab and click on any one item in the result list, all the
+        attributes related to the item will appear and click again to close it.
+        Use the search bar to filter the results by the attributes values.
       </p>
     </div>
   )
