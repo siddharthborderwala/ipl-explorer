@@ -35,15 +35,15 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
         onSubmit={handleFormSubmit}
       >
         <input
-          className="border rounded p-2 focus:outline-none focus-within:ring-2"
+          className="border text-indigo-500 placeholder-current rounded p-2 focus:outline-none focus-within:ring-2"
           type="text"
-          placeholder="Filter"
+          placeholder="Filter here"
           onChange={handleInputChange}
           value={filterValue}
         />
         <button
           type="submit"
-          className="py-2 px-6 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-green-400 bg-green-400"
+          className="py-1.5 px-6 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
