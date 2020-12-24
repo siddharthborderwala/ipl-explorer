@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Accordian from './Accordian'
 
-export default function List({ tab }) {
+export default function List({ tab, filter }) {
   const [data, setData] = useState([])
 
   const getAccTitle = () => (tab === 'matches' ? 'home' : 'name')
@@ -10,14 +10,42 @@ export default function List({ tab }) {
   useEffect(() => {
     axios(`/api/data?resource=${tab}&size=0&page=1`)
       .then((res) => setData(res.data.data))
-      .catch(() => setData([]))
+      .catch(() => setData(null))
   }, [tab])
+
+  useEffect(() => setData([]), [tab])
+
+  if (data?.length <= 1)
+    return (
+      <div className="mt-4 space-y-2">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
+          <div
+            className="bg-gray-200 animate-pulse h-10 border rounded"
+            key={i}
+          />
+        ))}
+      </div>
+    )
+  else if (data === null)
+    return (
+      <p className="font-bold text-xl mt-4 text-red-500">
+        Something got messed up, try again later!
+      </p>
+    )
 
   return (
     <div className="mt-4 space-y-2">
-      {data.map((elem) => (
-        <Accordian key={elem.id} title={elem[getAccTitle()]} data={elem} />
-      ))}
+      {data
+        .filter((elem) => {
+          for (const prop of Object.keys(elem)) {
+            if (elem[prop].toLowerCase().includes(filter.toLowerCase()))
+              return true
+          }
+          return false
+        })
+        .map((elem, index) => (
+          <Accordian key={index} title={elem[getAccTitle()]} data={elem} />
+        ))}
     </div>
   )
 }
