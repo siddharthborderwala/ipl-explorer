@@ -1,8 +1,8 @@
 /**
  * A basic API for the site to query data
  */
-import { parse } from '@fast-csv/parse'
-import fs from 'fs'
+import { parseString } from '@fast-csv/parse'
+import csvData from '../../data'
 
 /**
  * Function for data endpoint
@@ -50,14 +50,11 @@ export default async (req, res) => {
     const data = []
 
     await new Promise((resolve, reject) => {
-      fs.createReadStream(`${process.env.ROOT}/data/${resourceName}.csv`)
-        .pipe(
-          parse({
-            headers: true,
-            skipRows,
-            maxRows: size
-          })
-        )
+      parseString(csvData[resourceName], {
+        headers: true,
+        maxRows: size,
+        skipRows
+      })
         .on('error', (err) => reject(err))
         .on('data', (row) => data.push(row))
         .on('end', () => resolve())
