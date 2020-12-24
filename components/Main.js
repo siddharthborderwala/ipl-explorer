@@ -5,9 +5,14 @@ import Nav from './Nav'
 
 export default function Main() {
   const [tab, setTab] = useState('')
+  const [filter, setFilter] = useState('')
 
   const handleHashChange = (event) => {
     setTab(event.currentTarget.location.hash.slice(1))
+  }
+
+  const handleFilterSubmit = (value) => {
+    setFilter(value)
   }
 
   useEffect(() => {
@@ -26,11 +31,11 @@ export default function Main() {
       style={{ minHeight: 'calc(100vh - 150px)' }}
     >
       <div className="max-w-7xl bg-white mx-auto border rounded-xl shadow-sm">
-        <Nav activeTab={tab} />
+        <Nav activeTab={tab} handleFilterSubmit={handleFilterSubmit} />
         <hr />
         <main className="p-4">
           <h2 className="text-2xl font-bold capitalize">{tab}</h2>
-          {tab === '' ? <Info /> : <List tab={tab} />}
+          {tab === '' ? <Info /> : <List tab={tab} filter={filter} />}
         </main>
       </div>
     </div>
