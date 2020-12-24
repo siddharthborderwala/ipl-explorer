@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react'
  */
 export default function ToTopButton() {
   const [toTopVisible, setToTopVisible] = useState(false)
+
   const scrollListener = (e) => {
-    if (document.documentElement.scrollTop > 1500 && !toTopVisible) {
-      setToTopVisible(true)
-    } else if (document.documentElement.scrollTop < 1500 && toTopVisible) {
-      setToTopVisible(false)
+    if (document.documentElement.scrollTop > 1500) {
+      !toTopVisible && setToTopVisible(true)
+    } else {
+      toTopVisible && setToTopVisible(false)
     }
   }
 
