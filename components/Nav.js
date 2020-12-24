@@ -40,7 +40,7 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
         onSubmit={handleFormSubmit}
       >
         <input
-          className="text-indigo-600 placeholder-current rounded p-2 focus:outline-none focus-within:ring-2"
+          className="text-indigo-600 border-2 placeholder-current rounded py-1.5 px-2 focus:outline-none focus-within:ring-2"
           type="text"
           placeholder="Filter here"
           onChange={handleInputChange}

@@ -4,6 +4,8 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 import ToTopButton from '../components/ToTopButton'
 
+// TODO: styles for dark mode
+
 /**
  * The Home component rendered at /
  */
