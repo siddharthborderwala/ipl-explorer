@@ -20,11 +20,13 @@ export default function Accordian({ title, data }) {
         />
       </div>
       {isOpen && (
-        <div className="mt-2 pt-2 border-t">
+        <div className="my-2 pt-2 border-t">
           {Object.entries(data).map(([key, value], index) => (
-            <p key={index} className="capitalize text-gray-600">
-              <span className="underline">{key.replaceAll('_', ' ')}</span>: {}
-              {value}
+            <p key={index} className="capitalize text-gray-600 my-1">
+              <span className="text-xs mr-2 uppercase bg-indigo-100 text-indigo-600 border-none rounded p-1">
+                {key.replaceAll('_', ' ')}
+              </span>
+              <span>{value}</span>
             </p>
           ))}
         </div>
