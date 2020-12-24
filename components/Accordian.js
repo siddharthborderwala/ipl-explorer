@@ -12,18 +12,19 @@ export default function Accordian({ title, data }) {
         className="flex justify-between items-center cursor-pointer text-gray-900"
         onClick={handleToggle}
       >
-        <p>{title}</p>
+        <p className="flex-1 overflow-ellipsis">{title}</p>
         <PlusCircleIcon
-          className={`transition-transform ${
+          className={`ml-2 transition-transform ${
             isOpen ? 'transform rotate-45' : ''
           }`}
         />
       </div>
       {isOpen && (
         <div className="mt-2 pt-2 border-t">
-          {Object.entries(data).map(([key, value]) => (
-            <p className="capitalize text-gray-600">
-              {key.replaceAll('_', ' ')}: {value}
+          {Object.entries(data).map(([key, value], index) => (
+            <p key={index} className="capitalize text-gray-600">
+              <span className="underline">{key.replaceAll('_', ' ')}</span>: {}
+              {value}
             </p>
           ))}
         </div>
