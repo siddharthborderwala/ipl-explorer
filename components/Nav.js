@@ -26,7 +26,7 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
   }, [activeTab])
 
   return (
-    <nav className="bg-white dark:bg-my-black p-4 border-b dark:border-gray-400 rounded-b-none rounded-lg flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center">
+    <nav className="bg-white dark:bg-my-black p-4 border-b dark:border-gray-400 rounded-b-none rounded-md flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center">
       <div className="space-x-2 w-full flex justify-between md:block">
         <NavLink tabName="players" isActive={activeTab === 'players'} />
         <NavLink tabName="teams" isActive={activeTab === 'teams'} />

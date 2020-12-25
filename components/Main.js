@@ -36,7 +36,7 @@ export default function Main() {
     >
       <div className="max-w-7xl bg-white mx-auto border rounded-lg shadow-sm dark:border-gray-400">
         <Nav activeTab={tab} handleFilterSubmit={handleFilterSubmit} />
-        <main className="p-4 bg-white dark:bg-my-black dark:text-gray-50 rounded-lg rounded-t-none">
+        <main className="p-4 bg-white dark:bg-my-black dark:text-gray-50 rounded-md rounded-t-none">
           <h2 className="text-2xl font-bold capitalize">{tab}</h2>
           {tab === '' ? <Info /> : <List tab={tab} filter={filter} />}
         </main>
