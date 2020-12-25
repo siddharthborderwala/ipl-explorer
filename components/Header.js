@@ -10,9 +10,21 @@ export default function Header() {
     document.querySelector('html').classList.toggle('dark')
   }
 
+  const watchPreferredScheme = (ev) => {
+    if (ev.matches) document.querySelector('html').classList.add('dark')
+    else document.querySelector('html').classList.remove('dark')
+  }
+
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      document.querySelector('html').classList.add('dark')
+    const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
+
+    if (matchMedia.matches) toggleDarkMode()
+    matchMedia.addEventListener('change', watchPreferredScheme)
+
+    return () =>
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .removeEventListener('change', watchPreferredScheme)
   }, [])
 
   return (
