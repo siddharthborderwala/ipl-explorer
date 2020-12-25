@@ -56,7 +56,7 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
         <button
           aria-label="apply filter to results button"
           type="submit"
-          className="py-2 md:py-2.5 px-6 md:px-8 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
+          className="py-2.5 px-6 md:px-8 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
