@@ -3,6 +3,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'my-black': '#1A1A1A',
+        'my-gray': '#333333'
+      },
       scale: {
         175: '1.75',
         200: '2'
