@@ -6,12 +6,10 @@ import { useEffect, useState } from 'react'
 export default function ToTopButton() {
   const [toTopVisible, setToTopVisible] = useState(false)
 
-  const scrollListener = (e) => {
-    if (document.documentElement.scrollTop > 1500) {
+  const scrollListener = () => {
+    if (document.documentElement.scrollTop > 1500)
       !toTopVisible && setToTopVisible(true)
-    } else {
-      toTopVisible && setToTopVisible(false)
-    }
+    else setToTopVisible(false)
   }
 
   const scrollToTop = () => {
@@ -37,7 +35,6 @@ export default function ToTopButton() {
             width="24"
             height="24"
             fill="currentColor"
-            class="bi bi-arrow-up"
             viewBox="0 0 16 16"
           >
             <path
