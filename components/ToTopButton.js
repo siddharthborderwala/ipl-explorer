@@ -30,7 +30,7 @@ export default function ToTopButton() {
       {toTopVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 border-none rounded-md focus:outline-none focus:ring-2"
+          className="fixed bottom-4 right-4 bg-gray-800 dark:bg-gray-400 text-white dark:text-gray-800 p-2 border-none rounded-md focus:outline-none focus:ring-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -26,21 +26,21 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
   }, [activeTab])
 
   return (
-    <nav className="p-4 border-none rounded-lg flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-center">
-      <div className="space-x-2">
+    <nav className="bg-white dark:bg-my-black p-4 border-b dark:border-gray-400 rounded-b-none rounded-lg flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center">
+      <div className="space-x-2 w-full flex justify-between md:block">
         <NavLink tabName="players" isActive={activeTab === 'players'} />
         <NavLink tabName="teams" isActive={activeTab === 'teams'} />
         <NavLink tabName="venues" isActive={activeTab === 'venues'} />
       </div>
       <form
-        className="flex items-center mt-3 sm:mt-0"
+        className="flex w-full md:w-auto items-center mt-3 md:mt-0"
         autoComplete="off"
         autoCapitalize="off"
         autoCorrect="off"
         onSubmit={handleFormSubmit}
       >
         <input
-          className="text-indigo-600 border-2 placeholder-current rounded py-1.5 px-2 focus:outline-none focus-within:ring-2"
+          className="text-indigo-600 dark:bg-my-gray dark:text-indigo-100 dark:border-gray-400 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0 inline-block border placeholder-current rounded p-2.5 focus:outline-none focus-within:ring-2"
           type="text"
           placeholder="Filter here"
           onChange={handleInputChange}
@@ -56,7 +56,7 @@ export default function Nav({ activeTab, handleFilterSubmit }) {
         <button
           aria-label="apply filter to results button"
           type="submit"
-          className="py-1.5 px-6 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
+          className="py-2.5 px-8 ml-2 text-white focus:outline-none focus:ring-2 border rounded border-indigo-400 bg-indigo-400"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

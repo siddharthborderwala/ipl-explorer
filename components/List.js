@@ -25,7 +25,7 @@ export default function List({ tab, filter }) {
       <div className="mt-4 space-y-2">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
           <div
-            className="bg-gray-200 animate-pulse h-10 border rounded"
+            className="bg-gray-200 animate-pulse dark:bg-my-gray h-10 border dark:border-gray-400 rounded"
             key={i}
           />
         ))}
@@ -39,7 +39,7 @@ export default function List({ tab, filter }) {
     )
 
   return (
-    <div className="mt-4 space-y-2">
+    <div className="mt-4 space-y-2 bg-transparent">
       {data
         .filter((elem) => {
           for (const prop of Object.keys(elem)) {

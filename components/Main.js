@@ -31,13 +31,12 @@ export default function Main() {
 
   return (
     <div
-      className="bg-gray-50 py-6 px-4"
+      className="bg-gray-50 py-6 px-4 dark:bg-gray-700"
       style={{ minHeight: 'calc(100vh - 150px)' }}
     >
-      <div className="max-w-7xl bg-white mx-auto border rounded-xl shadow-sm">
+      <div className="max-w-7xl bg-white mx-auto border rounded-lg shadow-sm dark:border-gray-400">
         <Nav activeTab={tab} handleFilterSubmit={handleFilterSubmit} />
-        <hr />
-        <main className="p-4">
+        <main className="p-4 bg-white dark:bg-my-black dark:text-gray-50 rounded-lg rounded-t-none">
           <h2 className="text-2xl font-bold capitalize">{tab}</h2>
           {tab === '' ? <Info /> : <List tab={tab} filter={filter} />}
         </main>
