@@ -72,7 +72,7 @@ export default function List({ tab, filter, limit = 12 }) {
           <LeftArrow />
         </button>
         <span className="text-gray-800 dark:text-gray-50">
-          Page {pageNumber}
+          Page {pageNumber} of {Math.ceil(counter / limit)}
         </span>
         <button
           aria-label="next page button"
