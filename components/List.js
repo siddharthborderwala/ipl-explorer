@@ -9,7 +9,7 @@ import RightArrow from '../assets/icons/right-arrow.svg'
  * Renders pulsating skeleton while loading and an
  * error message on error
  *
- * @param {React.HTMLAttributes<HTMLAnchorElement> & {tab: string; filter: string;}} props
+ * @param {React.PropsWithChildren & {tab: string; filter: string;}} props
  */
 export default function List({ tab, filter, limit = 12 }) {
   const [data, setData] = useState([])
@@ -58,8 +58,8 @@ export default function List({ tab, filter, limit = 12 }) {
             return false
           })
           .slice((pageNumber - 1) * limit, pageNumber * limit)
-          .map((elem, index) => (
-            <Accordian key={index} title={elem['name']} data={elem} />
+          .map((elem) => (
+            <Accordian key={elem['name']} title={elem['name']} data={elem} />
           ))}
       </div>
       <div className="mt-6 flex items-center justify-between sm:space-x-4">

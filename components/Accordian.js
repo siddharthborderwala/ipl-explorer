@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PlusCircleIcon from '../assets/icons/plus-circle.svg'
 
 /**
  * Accordian displays a heading and additional data on tap
  *
- * @param {React.HTMLAttributes<HTMLDivElement> & {title: string; data: Object;}} props
+ * @param {React.PropsWithChildren & {title: string; data: Object;}} props
  */
 export default function Accordian({ title, data }) {
   const [isOpen, setIsOpen] = useState(false)
