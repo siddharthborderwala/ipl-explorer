@@ -11,9 +11,17 @@ class MyDocument extends Document {
           <meta name="description" content="IPL 2017 Explorer | Discovery" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
+            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
-            rel="stylesheet"
+            as="style"
+            onLoad="this.onload=null;this.rel='stylesheet'"
           />
+          <noscript>
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+              rel="stylesheet"
+            />
+          </noscript>
         </Head>
         <body>
           <Main />
