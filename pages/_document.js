@@ -23,7 +23,7 @@ class MyDocument extends Document {
             />
           </noscript>
         </Head>
-        <body>
+        <body className="bg-white dark:bg-my-black">
           <Main />
           <NextScript />
         </body>
