@@ -13,12 +13,11 @@ export default function List({ tab, filter }) {
   const [data, setData] = useState([])
 
   useEffect(() => {
+    setData([])
     axios(`/api/data?resource=${tab}&size=0&page=1`)
       .then((res) => setData(res.data.data))
       .catch(() => setData(null))
   }, [tab])
-
-  useEffect(() => setData([]), [tab])
 
   if (data?.length <= 1)
     return (
