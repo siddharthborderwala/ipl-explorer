@@ -28,6 +28,6 @@ I started building this website with 3 things in my mind
 
 - Now I pre-connect to gstatic for faster font css loading and pre-load the fonts.
 
-- Now, I am getting 100 in all the fields, performance, accessibility, best practices and seo. You can have a look at the report yourself [here](https://iplexplorer.vercel.app/report.pdf).
+- Now, I am getting 100 in all the fields, performance, accessibility, best practices and seo. You can have a look at the report yourself [here](https://iplexplorer.vercel.app/report.pdf). Also, the detailed report is [here](https://iplexplorer.vercel.app/report-expanded.pdf).
 
 - Also, vercel has an edge-network (cdn network) and caching for faster page loads.

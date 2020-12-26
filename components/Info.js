@@ -35,6 +35,13 @@ export default function Info() {
         <a href="/report.pdf" className="text-indigo-400 hover:underline">
           here
         </a>
+        . Also, you can find the detailed report
+        <a
+          href="/report-expanded.pdf"
+          className="text-indigo-400 hover:underline"
+        >
+          here
+        </a>
         .
       </Paragraph>
       <br />
