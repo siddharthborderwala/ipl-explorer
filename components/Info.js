@@ -29,6 +29,15 @@ export default function Info() {
         sun in the top right corner to toggle the modes.
       </Paragraph>
       <br />
+      <Paragraph title="Lighthouse Report 🚨">
+        You can find the lighthouse report (a website rating tool by google) for
+        this site {}
+        <a href="/report.html" className="text-indigo-400 hover:underline">
+          here
+        </a>
+        .
+      </Paragraph>
+      <br />
       <Paragraph title="Made by Siddharth 💻">
         I have made this explorer as a part of my challenge to qualify for an
         internship at {}
