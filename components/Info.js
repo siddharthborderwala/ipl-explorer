@@ -32,7 +32,7 @@ export default function Info() {
       <Paragraph title="Lighthouse Report 🚨">
         You can find the lighthouse report (a website rating tool by google) for
         this site {}
-        <a href="/report.html" className="text-indigo-400 hover:underline">
+        <a href="/report.pdf" className="text-indigo-400 hover:underline">
           here
         </a>
         .
